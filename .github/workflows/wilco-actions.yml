@@ -40,5 +40,5 @@ jobs:
           node-version: "16"
           cache: "yarn"
       - run: yarn install
-      - run: yarn upgrade
+      - run: yarn format
       - run: yarn lint
