@@ -53,8 +53,8 @@ router.get("/", auth.optional, function (req, res, next) {
     query.tagList = { $in: [req.query.tag] };
   }
 
-  if (req.body.title !== null) {
-    query.title = { $regex: req.body.title, $options: "i" };
+  if (typeof req.query.title !== "undefined") {
+    query.title = { $regex: req.query.title, $options: "i" };
   }
 
   Promise.all([
