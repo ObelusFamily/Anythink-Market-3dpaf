@@ -62,6 +62,7 @@ const mapStateToProps = (state) => ({
   ...state.itemList,
   tags: state.home.tags,
   token: state.common.token,
+  search: state.common.search
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -69,7 +70,10 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch({ type: CHANGE_TAB, tab, pager, payload }),
 });
 
+
+
 const MainView = (props) => {
+
   return (
     <div>
       <div className="feed-toggle">
@@ -88,7 +92,7 @@ const MainView = (props) => {
 
       <ItemList
         pager={props.pager}
-        items={props.items}
+        items={props.search && props.search.length >= 3 && props.filteredItems ? props.filteredItems.items : props.items}
         loading={props.loading}
         itemsCount={props.itemsCount}
         currentPage={props.currentPage}
