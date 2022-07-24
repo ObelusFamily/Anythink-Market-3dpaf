@@ -5,7 +5,7 @@ const Search = ({onSearchChange}) => {
   
 return (
 
-    <div className='search'>
+    <div className='search-box'>
         <input type="text" onChange={(e) => onSearchChange(e.target.value)} />
         <i  className="bi bi-search"></i>
     </div>

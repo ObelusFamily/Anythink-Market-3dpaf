@@ -9,7 +9,7 @@ const Banner = ({onSearchChange}) => {
         <img src={logo} alt="banner" />
         <div className="d-flex justify-content-center align-items-center">
           <span id="get-part">A place to get</span>
-          <Search  onSearchChange={onSearchChange}/>
+          <Search onSearchChange={onSearchChange}/>
   
           <span> the cool stuff.</span>
         </div>
