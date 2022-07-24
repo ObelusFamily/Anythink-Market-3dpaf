@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../imgs/logo.png";
-import Search from "../Search";
+import SearchBox from "../SearchBox";
 
 const Banner = ({onSearchChange}) => {
   return (
@@ -9,7 +9,7 @@ const Banner = ({onSearchChange}) => {
         <img src={logo} alt="banner" />
         <div className="d-flex justify-content-center align-items-center">
           <span id="get-part">A place to get</span>
-          <Search onSearchChange={onSearchChange}/>
+          <SearchBox onSearchChange={onSearchChange}/>
   
           <span> the cool stuff.</span>
         </div>

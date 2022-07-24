@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Search = ({onSearchChange}) => {
+const SearchBox = ({onSearchChange}) => {
   
 return (
 
@@ -12,4 +12,4 @@ return (
   )
 }
 
-export default Search
+export default SearchBox
