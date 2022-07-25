@@ -10,7 +10,7 @@ const Banner = ({onSearchChange}) => {
         <div className="d-flex justify-content-center align-items-center">
           <span id="get-part">A place to get</span>
           <SearchBox onSearchChange={onSearchChange}/>
-  
+          <input type="text" id="search-box"/>
           <span> the cool stuff.</span>
         </div>
       </div>
