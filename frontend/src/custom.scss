@@ -59,3 +59,21 @@ body {
 .user-info {
   min-width: 800px;
 }
+
+.search-box {
+  background: #fff;
+  padding: .7em;
+  margin: 0 1em;
+  border-radius: .5rem;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+}
+
+.search-box i {
+  background: transparent;
+  color: #6f42c1;
+  margin-left: 4em;
+}

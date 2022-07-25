@@ -15,12 +15,14 @@ import {
   SETTINGS_PAGE_UNLOADED,
   LOGIN_PAGE_UNLOADED,
   REGISTER_PAGE_UNLOADED,
+  HANDLE_SEARCH
 } from "../constants/actionTypes";
 
 const defaultState = {
   appName: "Anythink Market",
   token: null,
   viewChangeCounter: 0,
+  search: ''
 };
 
 const reducer = (state = defaultState, action) => {
@@ -60,6 +62,11 @@ const reducer = (state = defaultState, action) => {
         token: action.error ? null : action.payload.user.token,
         currentUser: action.error ? null : action.payload.user,
       };
+    case HANDLE_SEARCH:
+      return {
+        ...state,
+        search: action.payload
+      }
     case DELETE_ITEM:
       return { ...state, redirectTo: "/" };
     case ITEM_PAGE_UNLOADED:
