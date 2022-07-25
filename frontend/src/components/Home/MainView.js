@@ -3,6 +3,7 @@ import React from "react";
 import agent from "../../agent";
 import { connect } from "react-redux";
 import { CHANGE_TAB } from "../../constants/actionTypes";
+import Empty from "../Empty";
 
 const YourFeedTab = (props) => {
   if (props.token) {
@@ -76,7 +77,7 @@ const MainView = (props) => {
 
   return (
     <div>
-      <div className="feed-toggle">
+      {props.filteredItems && props.filteredItems.items.length === 0 ? <Empty/> : <> <div className="feed-toggle">
         <ul className="nav nav-tabs">
           <YourFeedTab
             token={props.token}
@@ -96,7 +97,8 @@ const MainView = (props) => {
         loading={props.loading}
         itemsCount={props.itemsCount}
         currentPage={props.currentPage}
-      />
+      /></>}
+     
     </div>
   );
 };
