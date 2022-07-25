@@ -9,7 +9,7 @@ const Banner = ({onSearchChange}) => {
       <div className="container p-4 text-center">
         <img src={logo} alt="banner" />
         <div className="d-flex justify-content-center align-items-center">
-          <span id="get-part">A place to <span onClick={() => setIsVisible(!isVisible)}>get </span></span>
+          <span id="get-part">A place to <span id="get-part" onClick={() => setIsVisible(!isVisible)}>get </span></span>
           {isVisible && <SearchBox onSearchChange={onSearchChange}/>}
          
     
